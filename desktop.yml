@@ -1,0 +1,17 @@
+---
+
+- hosts: localhost
+  connection: local
+  sudo: yes
+  tasks:
+    - name: install common desktop apps and tweaks
+      sudo: yes
+      apt: name="{{item}}" state=present
+      with_items:
+        - keepassx
+        - python-gpgme
+  roles:
+    - wtanaka.dropbox
+
+
+ 

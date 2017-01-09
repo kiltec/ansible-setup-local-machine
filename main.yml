@@ -1,0 +1,5 @@
+---
+
+- include: desktop.yml
+- include: development.yml	
+- include: cli.yml
