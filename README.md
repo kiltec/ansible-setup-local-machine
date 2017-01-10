@@ -3,7 +3,7 @@
 ## Usage ##
  - Install Ansible
  - ```ansible-galaxy install -r requirements.yml```
- - ```ansible-playbook main.yml```
+ - ```ansible-playbook main.yml -K```
  
 ## Todos ##
  - [ ] Add missing software
