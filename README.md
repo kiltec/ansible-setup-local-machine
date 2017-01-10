@@ -3,7 +3,7 @@
 ## Usage ##
  - Install Ansible
  - ```ansible-galaxy install -r requirements.yml```
- - ```ansible-playbook main.yml -K```
+ - ```ansible-playbook main.yml --ask-become-pass```
  
 ## Todos ##
  - [ ] Get rid of literal home directory
