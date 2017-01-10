@@ -11,6 +11,11 @@
         - keepassx
         - python-gpgme
         - clipit
+    - name: remove unwanted default ubuntu software
+      apt: name="{{item}}" state=absent
+      with_items:
+        - unity-webapps-common
+        - app-install-data-partner
   roles:
     - wtanaka.dropbox
     - { role: cmprescott.chrome }
