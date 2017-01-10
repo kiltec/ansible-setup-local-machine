@@ -5,6 +5,4 @@
     repo: https://github.com/VundleVim/Vundle.vim.git
     dest: '/home/lars/.vim/bundle/Vundle.vim'
 - name: install plugins
-  become: yes
-  become_user: lars
   shell: vim +PluginInstall +qall 

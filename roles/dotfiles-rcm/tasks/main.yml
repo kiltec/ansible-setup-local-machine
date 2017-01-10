@@ -1,12 +1,10 @@
 ---
 
 - name: add rcm repo
-  sudo: yes
   apt_repository:
     repo: 'ppa:martin-frost/thoughtbot-rcm'
     state: present 
 - name: install cli stuff
-  sudo: yes
   apt: name="{{item}}" state=present
   with_items:
       - rcm

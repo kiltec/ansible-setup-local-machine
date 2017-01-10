@@ -1,8 +1,9 @@
 ---
 
 - hosts: localhost
+  become: true
+  become_method: sudo
   connection: local
-  sudo: yes
   tasks:
     - name: install common desktop apps and tweaks
       apt: name="{{item}}" state=present
@@ -12,4 +13,4 @@
         - clipit
   roles:
     - wtanaka.dropbox
-    - { role: cmprescott.chrome, become: yes }
+    - { role: cmprescott.chrome }
