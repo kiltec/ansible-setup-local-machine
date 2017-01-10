@@ -5,11 +5,11 @@
   sudo: yes
   tasks:
     - name: install common desktop apps and tweaks
-      sudo: yes
       apt: name="{{item}}" state=present
       with_items:
         - keepassx
         - python-gpgme
+        - clipit
   roles:
     - wtanaka.dropbox
     - { role: cmprescott.chrome, become: yes }
