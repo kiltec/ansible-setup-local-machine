@@ -1,14 +1,17 @@
 ---
 
 - hosts: localhost
+  become: true
+  become_method: sudo
+  become_user: lars
   connection: local
   tasks:
     - name: install cli stuff
-      sudo: yes
       apt: name="{{item}}" state=present
       with_items:
         - terminator 
   roles:
     - dotfiles-rcm      
+    - ohmyzsh
     - ansible-vundle
 
