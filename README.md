@@ -6,7 +6,5 @@
  - ```ansible-playbook main.yml -K```
  
 ## Todos ##
- - [ ] Add missing software
  - [ ] Get rid of literal home directory
- - [ ] Use `become` instead of `sudo`
  - [ ] Write better README
