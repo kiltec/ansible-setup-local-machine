@@ -2,28 +2,13 @@
 
 - hosts: localhost
   connection: local
-  vars:
-    dotfiles_dir: /home/lars/.dotfiles
-  roles: []
   tasks:
-    - name: add rcm repo
-      sudo: yes
-      apt_repository:
-        repo: 'ppa:martin-frost/thoughtbot-rcm'
-        state: present
     - name: install cli stuff
       sudo: yes
       apt: name="{{item}}" state=present
       with_items:
         - terminator 
-        - rcm
-    - name: get dotfiles
-      git:
-        repo: git@github.com:kiltec/.dotfiles.git 
-        dest: "{{ dotfiles_dir }}" 
-        accept_hostkey: yes 
-    - name: symlink dotfiles using rcm
-      shell: env RCRC=$HOME/dotfiles/rcrc rcup
-      args:
-        chdir: /home/lars 
-        creates: .rcrc
+  roles:
+    - dotfiles-rcm      
+    - ansible-vundle
+
