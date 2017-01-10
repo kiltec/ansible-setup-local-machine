@@ -12,6 +12,4 @@
         - python-gpgme
   roles:
     - wtanaka.dropbox
-
-
- 
+    - { role: cmprescott.chrome, become: yes }
