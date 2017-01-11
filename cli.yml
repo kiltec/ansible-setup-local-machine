@@ -10,6 +10,10 @@
       apt: name="{{item}}" state=present
       with_items:
         - terminator 
+        - vim
+        - curl
+        - exfat-fuse
+        - exfat-utils
   roles:
     - dotfiles-rcm      
     - ohmyzsh

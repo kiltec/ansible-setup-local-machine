@@ -11,6 +11,9 @@
         - keepassx
         - python-gpgme
         - clipit
+        - pavucontrol
+        - brasero
+        - indicator-keylock
     - name: remove unwanted default ubuntu software
       apt: name="{{item}}" state=absent
       with_items:
