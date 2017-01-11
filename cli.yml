@@ -19,6 +19,10 @@
         - powertop
     - name: Ensure laptop-mode-tools absent
       apt: name="laptop-mode-tools" state=absent
+    - name: Create private projects dir
+      file: path=~/projects/private state=directory
+    - name: Create work projects dir
+      file: path=~/projects/work state=directory
 
   roles:
     - dotfiles-rcm      
