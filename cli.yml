@@ -2,12 +2,16 @@
 
 - hosts: localhost
   connection: local
+  pre_tasks:
+    - name: install vim
+      apt:
+        name: vim
+        state: present
   tasks:
     - name: install cli stuff
       apt: name="{{item}}" state=present
       with_items:
         - terminator 
-        - vim
         - curl
         - exfat-fuse
         - exfat-utils
