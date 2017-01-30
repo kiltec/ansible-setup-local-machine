@@ -2,8 +2,6 @@
 
 - hosts: localhost
   connection: local
-  become: true
-  become_method: sudo
   vars:
     ij_download_dir: /home/lars/Downloads
   roles:

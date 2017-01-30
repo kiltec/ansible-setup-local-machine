@@ -1,9 +1,6 @@
 ---
 
 - hosts: localhost
-  become: true
-  become_method: sudo
-  become_user: lars
   connection: local
   tasks:
     - name: install cli stuff
