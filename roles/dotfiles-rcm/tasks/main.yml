@@ -10,7 +10,7 @@
       - rcm
 - name: get dotfiles
   git:
-    repo: git@github.com:kiltec/.dotfiles.git 
+    repo: https://github.com/kiltec/.dotfiles.git
     dest: "{{ dotfiles_dir }}" 
     accept_hostkey: yes 
 - name: symlink dotfiles using rcm
