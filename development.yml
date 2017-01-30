@@ -9,3 +9,4 @@
   roles:
     - williamyeh.oracle-java
     - { role: rdeknijf.intellij, intellij_version: 2016.3, intellij_download_dir: "{{ ij_download_dir }}" }
+    - git-latest
