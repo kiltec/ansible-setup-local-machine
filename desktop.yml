@@ -19,4 +19,4 @@
         - app-install-data-partner
   roles:
     - wtanaka.dropbox
-    - { role: cmprescott.chrome }
+    - cmprescott.chrome
