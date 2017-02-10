@@ -4,6 +4,13 @@
   connection: local
   vars:
     ij_download_dir: /home/lars/Downloads
+
+  tasks:
+    - name: mysql client
+      apt: name="{{item}}" state=present
+      with_items:
+	- mysql-client
+
   roles:
     - williamyeh.oracle-java
     - { role: rdeknijf.intellij, intellij_version: 2016.3.3, intellij_download_dir: "{{ ij_download_dir }}" }
