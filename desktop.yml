@@ -21,6 +21,7 @@
         - network-manager-openconnect
         - network-manager-openconnect-gnome
         - redshift-gtk
+        - flashplugin-installer
     - name: remove unwanted default ubuntu software
       apt: name="{{item}}" state=absent
       with_items:
